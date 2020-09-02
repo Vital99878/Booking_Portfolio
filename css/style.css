@@ -72,9 +72,13 @@ body {
 .sidebar {
   font-size: 1rem;
   background-color: var(--color-grey-dark-1);
-  flex: 0 0 18%; }
+  flex: 0 0 18%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
 
 .hotel-view {
+  height: 100rem;
   background-color: #fff;
   background-color: yellow;
   flex: 1; }
@@ -154,3 +158,47 @@ body {
   .user-nav__user-photo {
     width: 3.75rem;
     border-radius: 50%; }
+
+.side-nav {
+  list-style: inherit;
+  margin-top: 2rem; }
+  .side-nav__item {
+    position: relative; }
+    .side-nav__item:not(:last-child) {
+      margin-bottom: 5rem; }
+  .side-nav__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: var(--color-primary);
+    transform-origin: bottom;
+    transform: scaleY(0);
+    transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s, background-color 0.1s; }
+  .side-nav__item:hover::before, .side-nav__item--active:before {
+    transform: scaleY(1);
+    width: 100%; }
+  .side-nav__item:active::before {
+    background-color: var(--color-primary-light); }
+  .side-nav__link:link, .side-nav__link:visited {
+    color: var(--color-grey-light-2);
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem 1.5rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: center; }
+  .side-nav__icon {
+    width: 1.75rem;
+    height: 1.75rem;
+    margin-right: 1.5rem;
+    fill: currentColor; }
+
+.legal {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--color-grey-light-4); }
