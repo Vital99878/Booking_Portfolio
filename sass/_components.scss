@@ -27,7 +27,7 @@
     &:focus {
       outline: none;
       width: 100%;
-      background-color: var(--color-grey-light-3);
+      background-color: var(--color-grey-light-2);
     }
 
     &::-webkit-input-placeholder { // не очень нужная хрень
@@ -38,7 +38,7 @@
   }
 
   &__input:focus + &__button { //делает у &__button такой же фон как у input:focus
-    background-color: var(--color-grey-light-3);
+    background-color: var(--color-grey-light-2);
   }
 
   &__button {
@@ -60,7 +60,7 @@
   &__icon { //svg
     height: 1.6rem;
     width: 1.6rem;
-    fill: var(--color-grey-dark-3);
+    //fill: var(--color-grey-light-2);
   }
 }
 
@@ -132,6 +132,7 @@
 
   &__item {
     position: relative;
+    list-style: none;
 
     &:not(:last-child) {
       margin-bottom: 5rem;
@@ -149,8 +150,8 @@
     transform-origin: bottom;
     transform: scaleY(0);
     transition: transform .2s,
-                width .4s cubic-bezier(1, 0, 0, 1) .2s,
-                background-color .1s;
+    width .4s cubic-bezier(1, 0, 0, 1) .2s,
+    background-color .1s;
   }
 
   &__item:hover::before,
@@ -166,7 +167,7 @@
 
   &__link:link,
   &__link:visited {
-    color: var(--color-grey-light-2);
+    color: var(--color-grey-light-1);
     text-transform: uppercase;
     text-decoration: none;
     display: block;
@@ -193,10 +194,344 @@
   font-size: 1.2rem;
   text-align: center;
   color: var(--color-grey-light-4);
+  margin-bottom: 1.6rem;
 }
 
 
+////////////////  GALLERY
 
+.gallery {
+  display: flex;
+
+  &__photo {
+    width: 100%;
+    display: block;
+  }
+
+}
+
+////////////////  HOTEL OVERVIEW
+
+.overview {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--color-grey-dark-2);
+
+  &__heading {
+    font-size: 2.25rem;
+    color: var(--color-grey-dark-2);
+    padding: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  &__stars {
+    display: flex;
+    margin-right: auto;
+  }
+
+  &__icon-star,
+  &__icon-location {
+    width: 1.75rem;
+    height: 1.75rem;
+    fill: var(--color-primary)
+  }
+
+  &__location {
+    font-size: 1.2rem;
+    display: flex;
+    vertical-align: center;
+    //padding: 1rem;
+  }
+
+  &__icon-location {
+    margin-right: .7rem;
+  }
+
+  &__rating {
+    background-color: var(--color-primary);
+    margin-left: 1rem;
+    padding: 2rem;
+    color: white;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__rating-count {
+    font-size: .8rem;
+    text-transform: uppercase;
+    margin-top: -5px;
+  }
+
+  &__rating-average {
+    font-size: 2.35rem;
+    font-weight: 300;
+  }
+}
+
+////////////////  BUTTON INLINE
+
+.btn-inline {
+  border: none;
+  color: var(--color-primary);
+  font-size: inherit;
+  border-bottom: 1px solid currentColor;
+  padding: 2px;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all .1s;
+
+  & span {
+    margin-left: 15px;
+    transition: all .4s;
+  }
+
+  &:hover {
+    color: var(--color-grey-dark-1);
+
+    span {
+      margin-left: 40px;
+    }
+  }
+
+  &:focus {
+    outline: none;
+    animation: pulse 1s infinite;
+  }
+
+
+}
+
+@keyframes pulse {
+
+  0% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .25);
+  }
+
+  100% {
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+}
+
+////////////////  PARAGRAPH
+
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem;
+}
+
+////////////////  LIST
+.list {
+  //display: flex;
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem .4rem;
+  border-top: var(--border_line);
+  border-bottom: var(--border_line);
+  display: flex;
+  flex-wrap: wrap;
+
+  &__item {
+    //padding: 0 .2rem;
+    flex: 0 0 50%;
+    margin-bottom: .7rem;
+    display: inline-block;
+  }
+
+  &__item::before {
+    content: "";
+    display: inline-block;
+    height: 1.8rem;
+    width: 1.8rem;
+    margin-right: .4rem;
+
+    // OLDER BROWSERS
+    background-image: url("../img/SVG/chevron-right.svg");
+    background-size: cover;
+
+    // NEWER BROWSERS mask
+    background-color: var(--color-primary);
+    -webkit-mask-image: url("../img/SVG/chevron-right.svg");
+    -webkit-mask-size: cover;
+  }
+
+}
+
+////////////////  RECOMMEND
+
+.recommend {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.3rem;
+  color: var(--color-grey-light-3);
+
+  &__count {
+    margin-right: auto;
+  }
+
+  &__friends {
+
+  }
+
+  &__photo {
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    border: 3px solid white;
+
+    &:not(:last-child) {
+      margin-right: -1.5rem;
+    }
+
+  }
+}
+
+////////////////  REVIEWS
+
+.review {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3rem;
+
+  &__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    //margin-right: auto;
+
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__user-box {
+    padding-left: 1rem;
+    margin-right: auto;
+  }
+
+  &__text {
+    z-index: 2;
+    position: relative;
+    margin-bottom: 2rem;
+
+    //font-size: 2rem;
+  }
+
+  &__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+  }
+
+  &__user-date {
+    color: var(--color-grey-dark-2);
+    font-size: 1rem;
+    flex-wrap: wrap;
+
+  }
+
+  &__user-rating {
+    color: var(--color-primary);
+  }
+
+  &::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.5rem;
+    left: -1rem;
+    font-size: 20rem;
+    line-height: 1;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    z-index: 1;
+  }
+}
+
+////////////////  CTA
+
+.cta {
+  //flex-wrap: wrap;
+  padding: 3.5rem 0;
+  text-align: center;
+
+  &__book-now {
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
+}
+
+////////////////  CTA BUTTON
+
+.btn {
+  position: relative;
+  font-size: 1.5rem;
+  border: none;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
+  color: white;
+  overflow: hidden;
+  cursor: pointer;
+
+  &__visible {
+    display: inline-block;
+    padding: 1.5rem 7rem;
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+  }
+
+  &__invisible {
+    display: inline-block;
+    position: absolute;
+    padding: 1.5rem 0rem;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: -100%;
+    transition: all  cubic-bezier(1, .5, .1, 1) .4s;
+  }
+
+  &:hover &__visible {
+    transform: translateY(100%);
+  }
+
+  &:hover &__invisible {
+    top: 0;
+  }
+
+  &:focus {
+    animation: pulse 1s infinite;
+  }
+
+  &:hover {
+    background-image: linear-gradient(to right,  var(--color-primary-dark), var(--color-primary-light));
+  }
+
+}
 
 
 
