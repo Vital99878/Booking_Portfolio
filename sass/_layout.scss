@@ -1,61 +1,99 @@
 .container {
-  max-width: 120rem;
-  margin: 8rem auto;
-  background-color: var(--color-grey-light-2);
-  box-shadow: var(--shadow-dark);
-  min-height: 50rem;
+    max-width: 120rem;
+    margin: 8rem auto;
+    background-color: var(--color-grey-light-2);
+    box-shadow: var(--shadow-dark);
+    min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+    }
 }
 
 .header {
-  font-size: 1.4rem;
-  height: 7rem;
-  background-color: #fff;
-  border-bottom: 1px solid var(--color-grey-dark-1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    font-size: 1.4rem;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: 1px solid var(--color-grey-dark-1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        height: 11rem;
+    }
+
 }
 
 .content {
-  display: flex;
+    display: flex;
+
+    @media only screen and (max-width: 900px) {
+        flex-direction: column;
+    }
 }
 
 .sidebar {
-  font-size: 1rem;
-  background-color: var(--color-grey-dark-1);
-  flex: 0 0 18%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    font-size: 1rem;
+    background-color: var(--color-grey-dark-1);
+    flex: 0 0 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
 .hotel-view {
-  background-color: #fff;
-  flex: 1;
+    background-color: #fff;
+    flex: 1;
 }
 
 .detail {
-  font-size: 1.6rem;
-  display: flex;
-  padding: 4.5rem;
-  background-color: var(--color-grey-light-1);
-  border-bottom: var(--border_line);
+    font-size: 1.6rem;
+    display: flex;
+    padding: 4.5rem;
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--border_line);
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 1.6rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+    }
 }
 
 .description {
-  padding: 2.6rem;
-  background-color: white;
-  box-shadow: var(--shadow-light);
-  flex: 0 0 60%;
-  margin-right: 5rem;
+    padding: 2.6rem;
+    background-color: white;
+    box-shadow: var(--shadow-light);
+    flex: 0 0 60%;
+    margin-right: 5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-right: 2rem;
+        font-size: 1.2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        margin-right: 0rem;
+        margin-bottom: 1rem;
+    }
 }
 
 .user-reviews {
-  //background-color: yellowgreen;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    //background-color: rgba(114, 205, 147, 0.6);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex: 1;
+        margin: 0;
+    }
 }
