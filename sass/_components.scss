@@ -11,7 +11,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
 
     @media only screen and (max-width: $bp-smallest) {
         order: 10;
@@ -45,7 +44,6 @@
     }
 
     &__input:focus + &__button { //делает у &__button такой же фон как у input:focus
-
         background-color: var(--color-grey-light-2);
     }
 
@@ -70,65 +68,6 @@
         width: 1.6rem;
         fill: var(--color-grey-light-3);
 
-=======
-
-    @media only screen and (max-width: $bp-smallest) {
-        order: 10;
-        flex: 0 0 100%;
-        background-color: var(--color-grey-light-1);
-    }
-
-    &__input {
-        font-size: inherit;
-        font-family: inherit;
-        color: inherit;
-        background-color: var(--color-grey-light-1);
-        padding: .7rem 2rem;
-        border: none;
-        border-radius: 30px;
-        width: 90%;
-        transition: all .3s;
-        margin-right: -3.5rem;
-
-        &:focus {
-            outline: none;
-            width: 100%;
-            background-color: var(--color-grey-light-2);
-        }
-
-        &::-webkit-input-placeholder { // не очень нужная хрень
-            //background-color: var(--color-grey-light-3);
-            font-weight: 100;
-        }
-
-    }
-
-    &__input:focus + &__button { //делает у &__button такой же фон как у input:focus
-        background-color: var(--color-grey-light-1);
-    }
-
-    &__button {
-        border: none;
-        background-color: var(--color-grey-light-1);
-        transition: all .1s;
-
-        &:focus {
-            outline: none;
-        }
-
-        &:active {
-            transform: translateY(-2px);
-        }
-
-
-    }
-    //TODO: поменять фон при фокусе у Icon
-    &__icon { //svg
-        height: 1.6rem;
-        width: 1.6rem;
-        fill: var(--color-grey-light-3);
-
->>>>>>> 73bf3e302f76c31e7b6e0c097a3f2cf96bc8dfb6
     }
 }
 
@@ -178,21 +117,12 @@
         justify-content: center;
         align-items: center;
     }
-<<<<<<< HEAD
 
     &__user-photo {
         width: 3.75rem;
         border-radius: 50%;
     }
 
-=======
-
-    &__user-photo {
-        width: 3.75rem;
-        border-radius: 50%;
-    }
-
->>>>>>> 73bf3e302f76c31e7b6e0c097a3f2cf96bc8dfb6
     &__user-name {
 
     }
@@ -231,7 +161,6 @@
             padding: 1rem;
         }
     }
-<<<<<<< HEAD
 
     &__item::before {
         content: "";
@@ -272,48 +201,6 @@
         display: flex;
         justify-content: center;
 
-=======
-
-    &__item::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 3px;
-        background-color: var(--color-primary);
-        transform-origin: bottom;
-        transform: scaleY(0);
-        transition: transform .2s,
-        width .4s cubic-bezier(1, 0, 0, 1) .2s,
-        background-color .1s;
-    }
-
-    &__item:hover::before,
-    &__item--active:before {
-        transform: scaleY(1);
-        width: 100%;
-    }
-
-    &__item:active::before {
-        background-color: var(--color-primary-light);
-    }
-
-
-    &__link:link,
-    &__link:visited {
-        color: var(--color-grey-light-1);
-        text-transform: uppercase;
-        text-decoration: none;
-        display: block;
-        padding: 1.5rem 1.5rem;
-        position: relative;
-        z-index: 10;
-
-        display: flex;
-        justify-content: center;
-
->>>>>>> 73bf3e302f76c31e7b6e0c097a3f2cf96bc8dfb6
         @media only screen and (max-width: $bp-small) {
             flex-direction: column;
             padding: 1rem .5rem;

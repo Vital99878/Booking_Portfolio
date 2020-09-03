@@ -166,11 +166,11 @@ body {
     .search__input::-webkit-input-placeholder {
       font-weight: 100; }
   .search__input:focus + .search__button {
-    background-color: var(--color-grey-light-2); }
+    background-color: var(--color-grey-light-1); }
   .search__button {
     border: none;
     background-color: var(--color-grey-light-1);
-    transition: all .3s; }
+    transition: all .1s; }
     .search__button:focus {
       outline: none; }
     .search__button:active {

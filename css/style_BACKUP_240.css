@@ -166,11 +166,15 @@ body {
     .search__input::-webkit-input-placeholder {
       font-weight: 100; }
   .search__input:focus + .search__button {
-    background-color: var(--color-grey-light-2); }
+    background-color: var(--color-grey-light-1); }
   .search__button {
     border: none;
     background-color: var(--color-grey-light-1);
+<<<<<<< HEAD
     transition: all .3s; }
+=======
+    transition: all .1s; }
+>>>>>>> 73bf3e302f76c31e7b6e0c097a3f2cf96bc8dfb6
     .search__button:focus {
       outline: none; }
     .search__button:active {
