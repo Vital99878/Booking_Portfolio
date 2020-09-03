@@ -23,18 +23,24 @@ Grey dark 3: #999
 
   // TEXT COLORS
   --color-grey-light-1: #faf9f9;
-  --color-grey-light-2: rgba(119, 119, 119, 0.3);
-  --color-grey-light-3: rgba(119, 119, 119, 0.8);
+  --color-grey-light-2: rgb(187, 188, 179);
+  --color-grey-light-3: rgb(124, 125, 116);
   --color-grey-light-4: #ccc;
 
   --color-grey-dark-1: #333;
-  --color-grey-dark-2: #777;
+  --color-grey-dark-2: #333333;
   --color-grey-dark-3: #999;
 
   --border_line:1px solid var(--color-grey-dark-2);
   --shadow-light:0 1rem 4rem rgba(0, 0, 255, 0.25);
   --shadow-dark:0 1rem 2rem rgba(0, 0, 255, 0.2);
 }
+
+$bp-largest: 75em; // 1200px;
+$bp-large: 75em; // 1100px;
+$bp-medium: 56.25em; // 900;
+$bp-small: 37.5em; // 600;
+$bp-smallest: 31.25em; // 500;
 
 
 * {
@@ -51,6 +57,10 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 1rem = 10 px
+
+  @media only screen and (max-width: $bp-medium){
+    //font-size: 50%; // 1rem = 10 px
+  }
 }
 
 body {
